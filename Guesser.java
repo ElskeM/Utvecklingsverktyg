@@ -78,4 +78,5 @@ public class Guesser {
                        " (took me " + numberOfGuesses +
                        " guesses)");
   }
+}
 
