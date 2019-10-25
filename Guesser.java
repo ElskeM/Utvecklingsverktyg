@@ -11,8 +11,8 @@ public class Guesser {
 	}
 
 	public Guesser(int l, int h) {
-		low = l;
-		high = h;
+		this.low = l;
+		this.high = h;
 
 		if (high < low) {
 			throw new IllegalArgumentException("The first parameter must be lower than the second parameter");
