@@ -8,10 +8,8 @@ public class GuessingGame {
 		int max = 0;
 
 		if (args.length < 1 || args.length > 1) {
-		min = 0;
-		max = 1000;
-		Guesser guesser = new Guesser(min, max);
-                guesser.start();
+		usage();
+		System.exit(1);
 		}
 		else {
 		min = Integer.parseInt(args[0]);
@@ -20,6 +18,11 @@ public class GuessingGame {
                 guesser.start();
 		}
 
-	}
-
+}
+private static void usage() {
+System.out.println("Usage: java GuessingGame low high" +
+ "\nwhere low is an integer for the lower bound" + 
+"\nand high is an integer for the upper bound" + 
+"\nof the interval for the numbers of the GuessingGame");
+}
 }
